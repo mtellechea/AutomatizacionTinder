@@ -1,14 +1,15 @@
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.WebDriver;
+//import org.junit.Assert;
+//import org.junit.BeforeClass;
+//7import org.junit.Test;
 import org.testng.Assert;
-
-import java.util.logging.Logger;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.MatchesPage;
 import pages.SummaryPage;
-//import BaseTest;
-import util.URLs;
+//import util.BaseTest;
+
 
 
 public class LoginPageTest extends BaseTest {
@@ -18,7 +19,7 @@ public class LoginPageTest extends BaseTest {
 
 
     @Test
-    public void openLoginPage() throws InterruptedException {
+    public void openLoginPage()  {
         LOGGER.info("Abro browser y voy a la pagina de Login");
         LoginPage loginPage = new LoginPage(driver);
         LOGGER.info("Trato de hacer Login");
