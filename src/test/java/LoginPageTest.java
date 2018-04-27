@@ -24,7 +24,7 @@ public class LoginPageTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         LOGGER.info("Trato de hacer Login!");
         System.out.print("martin.tellechea");
-        SummaryPage summaryPage = loginPage.loginUser("martin.tellechea", "Machete93()=?");
+        SummaryPage summaryPage = loginPage.loginUser("martin.tellechea", "Machete94()=?");
         Assert.assertTrue(summaryPage.isApp());
     }
 
