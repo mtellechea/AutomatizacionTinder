@@ -22,7 +22,7 @@ public class LoginPageTest extends BaseTest {
     public void openLoginPage()  {
         LOGGER.info("Abro browser y voy a la pagina de Login");
         LoginPage loginPage = new LoginPage(driver);
-        LOGGER.info("Trato de hacer Login");
+        LOGGER.info("Trato de hacer Login!");
         System.out.print("martin.tellechea");
         SummaryPage summaryPage = loginPage.loginUser("martin.tellechea", "Machete93()=?");
         Assert.assertTrue(summaryPage.isApp());
