@@ -22,7 +22,7 @@ public class MatchesPageTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         LOGGER.info("Logueandome");
         //System.out.print("martin.tellechea");
-        summaryPage = loginPage.loginUser("martin.tellechea", "Machete93()=?");
+        summaryPage = loginPage.loginUser("martin.tellechea", "Machete94()=?");
         matchesPage = summaryPage.clickMatches();
 
     }
