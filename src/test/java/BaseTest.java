@@ -17,7 +17,7 @@ public  class BaseTest {
 
       @BeforeClass
       public  static void openDriver() throws Exception {
-          driver = buildDriver(Browser.FIREFOX);
+          driver = buildDriver(Browser.CHROME);
           driver.get(URLs.RC.getUrl());
       }
 

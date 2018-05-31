@@ -2,6 +2,7 @@
 //import org.junit.BeforeClass;
 //7import org.junit.Test;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,7 +31,13 @@ public class SummaryPageTest extends BaseTest {
         summaryPage.lanzaBusquedaSummary();
         MatchesPage matchesPage = summaryPage.clickMatches();
         Assert.assertTrue(matchesPage.isApp());
-
-        Assert.assertTrue(true);
+      //Assert.assertTrue(true);
     }
+
+    @AfterClass
+    public static void tearDownDriver() {
+        driver.quit();
+        //driver.quit();
+    }
+
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="Main Test Suite" parallel="classes" >
+    <test name="prueba">
+
+        <classes>
+            <class name="SummaryPageTest"></class>
+        </classes>
+        <classes>
+            <class name="LoginPageTest"></class>
+        </classes>
+    </test>
+
+</suite>
