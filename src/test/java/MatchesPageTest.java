@@ -2,6 +2,7 @@
 //import org.junit.BeforeClass;
 //7import org.junit.Test;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -137,6 +138,12 @@ public class MatchesPageTest extends BaseTest {
             LOGGER.info("Reporte generado OK");
         else LOGGER.info("Reporte NO generado: "+resultadoReport);
         Assert.assertTrue(matchesPage.trajoResults());
+    }
+
+    @AfterClass
+    public static void tearDownDriver() {
+        driver.quit();
+        //driver.quit();
     }
 
 }

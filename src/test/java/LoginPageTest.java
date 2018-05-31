@@ -2,15 +2,14 @@
 //import org.junit.BeforeClass;
 //7import org.junit.Test;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.MatchesPage;
 import pages.SummaryPage;
 //import util.BaseTest;
-
+import util.Browser;
+import util.URLs;
+import static util.SeleniumUtils.buildDriver;
 
 
 public class LoginPageTest extends BaseTest {
@@ -18,6 +17,11 @@ public class LoginPageTest extends BaseTest {
    // private static final Logger LOGGER = Logger.getLogger(LoginPageTest.class.getName());
     //private static WebDriver driver;
 
+    @BeforeTest
+    public  static void openDriver() throws Exception {
+        driver = buildDriver(Browser.FIREFOX);
+        driver.get(URLs.RC.getUrl());
+    }
 
     @Test
     public void openLoginPage()  {
@@ -29,7 +33,7 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(summaryPage.isApp());
     }
 
-    @AfterClass
+    @AfterTest
     public static void tearDownDriver() {
         driver.quit();
         //driver.quit();

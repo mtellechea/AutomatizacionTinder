@@ -1,20 +1,27 @@
 //import org.junit.Assert;
 //import org.junit.BeforeClass;
 //7import org.junit.Test;
+import org.junit.After;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.MatchesPage;
 import pages.SummaryPage;
+import util.Browser;
+import util.URLs;
+
+import static util.SeleniumUtils.buildDriver;
 //import util.BaseTest;
 
 public class SummaryPageTest extends BaseTest {
 
     public static SummaryPage summaryPage;
 
+    @BeforeTest
+    public  static void openDriver() throws Exception {
+        driver = buildDriver(Browser.CHROME);
+        driver.get(URLs.RC.getUrl());
+    }
 
     @BeforeMethod
     public static void openLoginPage() throws InterruptedException {
@@ -34,7 +41,7 @@ public class SummaryPageTest extends BaseTest {
       //Assert.assertTrue(true);
     }
 
-    @AfterClass
+    @AfterTest
     public static void tearDownDriver() {
         driver.quit();
         //driver.quit();
