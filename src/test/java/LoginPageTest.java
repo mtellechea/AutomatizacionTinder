@@ -33,7 +33,7 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(summaryPage.isApp());
     }
 
-    @AfterTest
+    @AfterMethod
     public static void tearDownDriver() {
         driver.quit();
         //driver.quit();

@@ -19,7 +19,7 @@ public class SeleniumUtils {
 
     public static WebDriver buildDriver (Browser browser) throws Exception {
         WebDriver driver;
-        String Node = "http://127.0.0.1:4446/wd/hub";
+        String Node = "http://127.0.0.1:4444/wd/hub";
         DesiredCapabilities cap;
 
         switch (browser) {

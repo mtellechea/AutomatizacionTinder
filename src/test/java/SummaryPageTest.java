@@ -17,11 +17,14 @@ public class SummaryPageTest extends BaseTest {
 
     public static SummaryPage summaryPage;
 
+    /*
     @BeforeTest
     public  static void openDriver() throws Exception {
         driver = buildDriver(Browser.CHROME);
         driver.get(URLs.RC.getUrl());
     }
+    */
+
 
     @BeforeMethod
     public static void openLoginPage() throws InterruptedException {
@@ -33,6 +36,8 @@ public class SummaryPageTest extends BaseTest {
 
     }
 
+
+
     @Test
     public void testMenu() {
         summaryPage.lanzaBusquedaSummary();
@@ -41,7 +46,7 @@ public class SummaryPageTest extends BaseTest {
       //Assert.assertTrue(true);
     }
 
-    @AfterTest
+    @AfterMethod
     public static void tearDownDriver() {
         driver.quit();
         //driver.quit();
